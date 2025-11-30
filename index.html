@@ -17,12 +17,12 @@
 
 	<header class="header">
 		<nav class="header__nav">
-			<ul class="header__list" id="header__list">
-				<li><a class="header__link" id="main_header_link_1" href="index.html">Главная</a></li>
-				<li><a class="header__link" id="main_header_link_2" href="./pages/services.html">Услуги</a></li>
-				<li><a class="header__link" id="main_header_link_3" href="./pages/works.html">Мои работы</a></li>
-				<li><a class="header__link" id="main_header_link_4" href="./pages/about.html">Обо мне</a></li>
-				<li><a class="header__link" id="main_header_link_5" href="./pages/contacte.html">Контакты</a></li>
+			<ul class="header__list list-unstyled mb-0" id="header__list">
+				<li><a class="header__link" id="main_header_link_1" target="_blank" href="index.html">Главная</a></li>
+				<li><a class="header__link" id="main_header_link_2" target="_blank" href="./pages/services.html">Услуги</a></li>
+				<li><a class="header__link" id="main_header_link_3" target="_blank" href="./pages/works.html">Мои работы</a></li>
+				<li><a class="header__link" id="main_header_link_4" target="_blank" href="./pages/about.html">Обо мне</a></li>
+				<li><a class="header__link" id="main_header_link_5" target="_blank" href="./pages/contacte.html">Контакты</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -32,7 +32,9 @@
 			<div class="container">
 				<p class="main-screen__text text-center">Хочу в передовую IT студию</p>
 				<h1 class="main-screen__title text-center">Где создают легкие решения сложных задач и проблем</h1>
-				<button class="btn">Мои проекты</button>
+
+				<a href="/pages/works.html" target="_blank"><button type="button" class="btn">Мои проекты</button></a>
+				
 			</div>
 		</section>
 
@@ -50,7 +52,7 @@
 						</div>
 						<div class="services__texts">
 							<h6 class="services__text">Создание веб-сайтов</h6>
-							<p>Создание веб-сайтов, порталов и интернет-магазинов.</p>
+							<p>Создание веб-сайтов и интернет-магазинов.</p>
 						</div>
 					</div>
 
@@ -78,7 +80,8 @@
 
 				</div>
 
-				<button class="btn">Все услуги</button>
+				<a href="/pages/services.html" target="_blank"><button type="button" class="btn">Все услуги</button></a>
+				
 
 			</div>
 		</section>
@@ -86,7 +89,7 @@
 		<section class="works">
 			<div class="container">
 				<div class="works__main">
-					<h2>Наши работы, на которых
+					<h2 class="text-center">Наши работы, на которых
 					мы специализируемся</h2>
 				</div>
 				<div class="works__cards">
@@ -94,7 +97,23 @@
 						<div class="works__pic">
 							<img src="img/works__pic.jpg" alt="works-pic">
 						</div>
+					
+					<div class="works__content">
+						<h6 class="works-content__title text-center">
+							Исследование
+						</h6>
+						<p class="works-content__text text-center">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique error ullam, numquam ratione officiis porro repellendus labore eum quis, illo eveniet soluta consequatur nemo saepe praesentium ducimus accusantium quam impedit.
+						</p>
+						<a href="/pages/works.html" class="works-content__link" target="_blank">Подробнее</a>
 					</div>
+				   </div>
+
+					<div class="works__card">
+						<div class="works__pic">
+							<img src="img/works__pic.jpg" alt="works-pic">
+						</div>
+					
 					<div class="works__content">
 						<h6 class="works-content__title">
 							Исследование
@@ -102,61 +121,88 @@
 						<p class="works-content__text">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique error ullam, numquam ratione officiis porro repellendus labore eum quis, illo eveniet soluta consequatur nemo saepe praesentium ducimus accusantium quam impedit.
 						</p>
-						<a href="" class="works-content__link" target="_blank">Подробнее</a>
+						<a href="/pages/works.html" class="works-content__link" target="_blank">Подробнее</a>
 					</div>
-				</div>
+				   </div>
 
-				<div class="works-carousel">
-					<div id="carouselExampleDark" class="carousel carousel-dark slide">
-						<div class="carousel-indicators">
-							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-								aria-current="true" aria-label="Slide 1"></button>
-							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					<div class="works__card">
+						<div class="works__pic">
+							<img src="img/works__pic.jpg" alt="works-pic">
 						</div>
-						<div class="carousel-inner">
-							<div class="carousel-item active" data-bs-interval="10000">
-								<img src="/img/koncepcia-kollaza-html-i-css.jpg" class="d-block w-100" alt="...">
-								<div class="carousel-caption d-none d-md-block">
-									<h5>Спасибо что научили !</h5>
-									<p>Если вы дадите человеку программу, то займете его на один день. Если вы научите человека программировать, то займете его
-									на всю жизнь.
-									
-									Waseem Latif</p>
-								</div>
-							</div>
-							<div class="carousel-item" data-bs-interval="2000">
-								<img src="/img/fon-programmirovania-s-celovekom-rabotausim-s-kodami-na-komp-utere.jpg" class="d-block w-100" alt="...">
-								<div class="carousel-caption d-none d-md-block">
-									<h5>Это чувство уже преследует</h5>
-									<p>Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
-									
-									Martin Golding</p>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<img src="/img/ludi-rabotausie-s-ustroistvami-upravlaemymi-iskusstvennym-intellektom.jpg" class="d-block w-100" alt="...">
-								<div class="carousel-caption d-none d-md-block">
-									<h5>В предвкушении</h5>
-									<p>Молодые специалисты не умеют работать, а опытные специалисты умеют не работать.
-									
-									Alexander Golov</p>
-								</div>
-							</div>
+					
+						<div class="works__content">
+							<h6 class="works-content__title">
+								Исследование
+							</h6>
+							<p class="works-content__text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique error ullam, numquam ratione officiis porro
+								repellendus labore eum quis, illo eveniet soluta consequatur nemo saepe praesentium ducimus accusantium quam
+								impedit.
+							</p>
+							<a href="/pages/works.html" class="works-content__link" target="_blank">Подробнее</a>
 						</div>
-						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Previous</span>
-						</button>
-						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Next</span>
-						</button>
 					</div>
-
-				</div>
-
+			   </div>
 			</div>
+			<hr>
+      </section>
+
+		<section>
+				<div class="col-6">
+<div class="works-carousel">
+	<div id="carouselExampleDark" class="carousel carousel-dark slide">
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+				aria-current="true" aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		</div>
+		<div class="carousel-inner">
+			<div class="carousel-item active" data-bs-interval="10000">
+				<img src="/img/koncepcia-kollaza-html-i-css.jpg" class="d-block w-100" alt="kollaza-html-i-css">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>Спасибо что научили !</h5>
+					<p>Если вы дадите человеку программу, то займете его на один день. Если вы научите человека
+						программировать, то займете его
+						на всю жизнь.
+
+						Waseem Latif</p>
+				</div>
+			</div>
+			<div class="carousel-item" data-bs-interval="2000">
+				<img src="/img/fon-programmirovania-s-celovekom-rabotausim-s-kodami-na-komp-utere.jpg" class="d-block w-100"
+					alt="programmirovania">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>Это чувство уже преследует</h5>
+					<p>Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы
+						живете.
+
+						Martin Golding</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="/img/ludi-rabotausie-s-ustroistvami-upravlaemymi-iskusstvennym-intellektom.jpg"
+					class="d-block w-100" alt="iskusstvennym-intellektom">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>В предвкушении</h5>
+					<p>Молодые специалисты не умеют работать, а опытные специалисты умеют не работать.
+
+						Alexander Golov</p>
+				</div>
+			</div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
+
+</div>
+				</div>
 		</section>
 
 		<section class="about">
