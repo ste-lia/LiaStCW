@@ -216,6 +216,7 @@ section {
 	border-radius: 10px;
 	/* border: solid 1px var(--dark); */
 	box-shadow: 0 0 10px 0 var(--dark);
+	padding: 10px;
 }
 .works__pic img {
 	border-radius: 10px;
@@ -234,7 +235,21 @@ section {
 	color: var(--accent);
 }
 
+.video {
+	background-color: var(--dark);
+}
 
+
+
+.footer {
+	height: 150px;
+	background-color: var(--accent);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+
+}
 
 /* @media screen and (min-width: 992px) {
 	
