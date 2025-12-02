@@ -246,52 +246,76 @@ section {
 }
 
 .projects {
-	/* background: var(--gray); */
+	background-color: var(--gray);
 	height: 100px;
 	margin-top: 0;
-display: flex;
-flex-wrap: wrap;
-min-width: 920px;
-margin: 0 auto;
-justify-content: space-between;
-gap: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   min-width: 920px;
+   margin: 0 auto;
+   justify-content: space-between;
+   gap: 20px;
 }
 .projects__item {
 	position: relative;
 	cursor: pointer;
+}
+.projects__item::after {
+	content: "";
+	display: block;
+	width: 50px;
+	height: 50px;
+	background-color: var(--accent);
+}
+.projects__item:hover::after {
+	border-radius: 50%;
+}
+.projects__item:hover
+.projects__info span {
+	transform: scale(2);
+}
+.projects__info {
+	display: flex;
+	align-items: center;
+	margin-left: 20px;
 }
 .projects__info span {
 	font-style: 36px;
 	font-weight: 400;
 	color: var(--dark);
 }
+/* .projects__info span:hover {
+	transform: scale(2);
+} */
+
 .projects__info-text {
 	font-style: 21px;
-	margin-top: 10px;color: var(--gray);
+	margin-top: 10px;
+	color: var(--gray);
 }
 
 .projects__item {
-	animation: miscare, 10s;
+	animation: miscare 10s infinite;
 }
-.cerc {
+/* .cerc {
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
 	background: var(--accent);
-	animation: miscare 10s;
-}
+	animation: miscare 10s infinite;
+} */
 @keyframes miscare {
 	0% {
 		transform: translate(0px);
 	}
 	25% {
-      transform: translate(0, -300px);
+      transform: translate(0, -200px);
 	}
 	50% {
-		transform: translate(300px, -300px);
+		transform: translate(200px, -200px);
 	}
 	75% {
-		transform: translate(300px, 0);
+		transform: translate(200px, 0);
 	}
 	100% {
 		transform: translate(0);
