@@ -245,6 +245,7 @@ section {
 	margin: 50px;
 }
 
+/* projects */
 .projects {
 	background-color: var(--gray);
 	height: 100px;
@@ -295,7 +296,7 @@ section {
 }
 
 .projects__item {
-	animation: miscare 10s infinite;
+	animation: move 10s infinite;
 }
 /* .cerc {
 	width: 50px;
@@ -304,7 +305,7 @@ section {
 	background: var(--accent);
 	animation: miscare 10s infinite;
 } */
-@keyframes miscare {
+@keyframes move {
 	0% {
 		transform: translate(0px);
 	}
@@ -329,10 +330,70 @@ section {
 }
 
 
+/* form */
+.form__container {
+	background-color: var(--accent);
+	opacity: 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.form__contact {
+	width: 600px;
+	height: 400px;
+	border-radius: 12px;
+	padding: 15px 25px;
+	animation: tricolor 10s infinite;
+	margin: 0 auto;
+}
+.contact__inputs {
+	margin: 0 auto;
+}
+.contact__input {
+	width: 80%;
+	height: 40px;
+	margin: 15px 0;
+	border: none;
+	border-radius: 12px;
+	padding-left: 15px;
+	transition: all 1s;
+}
+.message_box {
+	height: 150px;
+}
+.contact__input:invalid {
+	color: red
+}
+.contact__input:valid {
+	color: green;
+}
 
+.checkbox__container {
+	width: 100%;
+	display: block;
+}
+
+
+@keyframes tricolor {
+	0% {
+		background-color: var(--accent);
+	}
+
+	50% {
+		background-color: #504DC2;
+	}
+
+	100% {
+		background-color: #5F12D0;
+	}
+}
+/* #504DC2 20%,
+#5F12D0 80%) */
+
+/* footer */
 .footer {
 	height: 150px;
-	background-color: var(--accent);
+	background-color: var(--dark);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
