@@ -114,6 +114,59 @@ section {
 	}
 }
 
+
+
+
+.shoppingCart {
+	width: 80px;
+	/* img {
+		width: 100%;
+		height: auto;
+	} */
+	position: absolute;
+	right: 100px;
+	cursor: pointer;
+}
+
+.shoppingCartImg {
+	width: 100%;
+	height: auto;
+}
+.cartContent {
+	/* display: none; */
+	box-sizing: border-box;
+	border-radius: 15px;
+	width: 400px;
+	padding: 20px;
+	height: auto;
+	max-height: 600px;
+	background-color: var(--gray);
+	position: absolute;
+	left: 250px;
+	transition: all 1s ease-in-out;
+}
+
+.cartContentVisible {
+	left: -250px;
+}
+
+.shoppingCartElement {
+	box-sizing: border-box;
+	width: 90%;
+	height: 100px;
+	margin: 5px;
+	padding: 10px;
+	border-radius: 12px;
+	background-color: #fff;
+	display: flex;
+
+}
+
+.cartElementImage {
+	height: 90%;
+	width: auto;
+}
+
 /* .services {
 
 } */

@@ -142,9 +142,9 @@ button.addEventListener('click', () => {
 
 
 
-let container = document.querySelector('.container');
+let contain = document.querySelector('.contain');
 for (const produs of produse) {
    let card = createProductCard(produs)
 
-   container.insertAdjacentElement('beforeend', card)
+   contain.insertAdjacentElement('beforeend', card)
 }
