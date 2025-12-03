@@ -328,6 +328,10 @@ section {
 .video {
 	background-color: var(--dark);
 }
+.video__video {
+	display: flex;
+	justify-content: center;
+}
 
 
 /* form */
@@ -347,7 +351,8 @@ section {
 	margin: 0 auto;
 }
 .contact__inputs {
-	margin: 0 auto;
+	/* margin: 0 auto; */
+	justify-content: center;
 }
 .contact__input {
 	width: 80%;
@@ -365,7 +370,7 @@ section {
 	color: red
 }
 .contact__input:valid {
-	color: green;
+	color: var(--dark);
 }
 
 .checkbox__container {

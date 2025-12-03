@@ -3,10 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="/style/services.css">
+
+
 	<title>LiaStCW-services</title>
-
-	<link rel="stylesheet" href="./style.css">
-
 
 </head>
 <body>
@@ -14,16 +19,94 @@
 	<header class="header">
 		<nav class="header__nav">
 			<ul class="header__list" id="header__list">
-				<li><a class="header__link" id="main_header_link_1" href="index.html">Главная</a></li>
-				<li><a class="header__link" id="main_header_link_2" href="./pages/services.html">Услуги</a></li>
-				<li><a class="header__link" id="main_header_link_3" href="./pages/works.html">Мои работы</a></li>
-				<li><a class="header__link" id="main_header_link_4" href="./pages/about.html">Обо мне</a></li>
-				<li><a class="header__link" id="main_header_link_5" href="./pages/contacte.html">Контакты</a></li>
+				<li><a class="header__link" id="main_header_link_1" href="/index.html">Главная</a></li>
+				<li><a class="header__link" id="main_header_link_2" href="/pages/services.html">Услуги</a></li>
+				<li><a class="header__link" id="main_header_link_3" href="/pages/works.html">Мои работы</a></li>
+				<li><a class="header__link" id="main_header_link_4" href="/pages/about.html">Обо мне</a></li>
+				<li><a class="header__link" id="main_header_link_5" href="/pages/contacte.html">Контакты</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<section class="services">
+		<div class="container">
+
+			<h2 class="services__title title text-center">
+				Мы создаем мобильные приложения
+				для крупных корпораций
+			</h2>
+			
+			<div class="services__items">
+				<div class="services__item">
+					<div class="services__icon">
+						<img src="/img/project.svg" alt="project">
+					</div>
+					<div class="services__texts">
+						<h6 class="services__text">Создание веб-сайтов</h6>
+						<p>Создание веб-сайтов и интернет-магазинов.</p>
+					</div>
+				</div>
+			
+				<div class="services__item">
+					<div class="services__icon">
+						<img src="/img/project.svg" alt="project">
+					</div>
+					<div class="services__texts">
+						<h6 class="services__text">Создание мобильных приложений</h6>
+						<p>Разработка мобильных приложений для разных платформ.
+						</p>
+					</div>
+				</div>
+			
+				<div class="services__item">
+					<div class="services__icon">
+						<img src="/img/project.svg" alt="project">
+					</div>
+					<div class="services__texts">
+						<h6 class="services__text">Содержание программ</h6>
+						<p>Модификация и адаптация существующих программ.
+						</p>
+					</div>
+				</div>
+			
+			</div>
+
+		</div>
+	</section>
+
+<hr>
+
+	<section>
+
+		<h1>Продукция:</h1>
+		<ul class="productList">
+			<li>
+				<p>Лэндинг <button onclick="addProduct('Лэндинг', 900)">Заказать</button></p>
+			</li>
+			<li>
+				<p>Корпоративный сайт <button onclick="addProduct('Корпоративный сайт', 1000)">Заказать</button></p>
+			</li>
+			<li>
+				<p>Интернет магазин <button onclick="addProduct('Интернет магазин', 1500)">Заказать</button></p>
+			</li>
+			<li>
+				<p>Портал <button onclick="addProduct('Портал', 2000)">Заказать</button></p>
+			</li>
+		</ul>
+		<hr>
+
+
+		<h1>Shopping Cart:</h1>
+		<ul class="shoppingCart">
+		
+		</ul>
+		
+		<h3 class="price">Итоговая сумма: </h3>
+		<hr>
+		<button onclick="resetCart()">Очистить</button>
+
+		<hr>
+
 		<div class="container">
 
 		</div>
@@ -32,3 +115,8 @@
 	
 </body>
 </html>
+
+
+<script src="/scripts/services.js"></script>
+
+<script src="/script.js"></script>
