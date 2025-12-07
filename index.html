@@ -26,13 +26,13 @@
 			</ul>
 		<!-- </nav> -->
 
-			<div class="shoppingCart">
+			<!-- <div class="shoppingCart">
 			<img class="shoppingCartImg" src="/img/cart_13380091.png" alt="shoppingCartImg">
 			
 			<div class="cartContent">
 			
-			</div>
-			</div>
+			</div> -->
+			<!-- </div> -->
 		</nav>
 	</header>
 
@@ -289,15 +289,16 @@
 			<p class="form__text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, fugit dolore, perferendis vel aut at quod eaque numquam sequi quas saepe natus non porro architecto. Perspiciatis distinctio porro nemo iste.</p>
 			<form action="" class="form__contact">
 				<div class="contact__inputs">
-					<input class="contact__input" id="contact_email" type="email" placeholder="Email" name="email" required minlength="3">
 					<input class="contact__input" type="text" placeholder="Name, Firstname" name="name" required minlength="3">
+					<input class="contact__input" id="contact_email" type="email" placeholder="Email" name="email" required minlength="3">
+					<input class="contact__input" type="tel" placeholder="Number" name="tel" required min="6">
 					<span class="checkbox__container">
 						<input class="contact__input-checkbox" id="contact__input-checkbox" type="checkbox" name="tos">
 						<label for="contact__input-checkbox">Принимаю условия пользования...</label>
 					</span>
-					<textarea class="message__box contact__input"></textarea>
+					<textarea class="message__box contact__input" id="comment" name="comment" rows="4" cols="" placeholder="Your message ..."></textarea>
 					<p id="text_email"></p>
-					<input type="submit">
+					<input class="contact__input btn" type="submit">
 				</div>				
 			</form>
 		</div>

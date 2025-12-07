@@ -10,13 +10,108 @@ if (cartFromStorage) {
    updateDOM()
 }
 
-function addProduct(product, price){
+let services = [
+   {
+      name: 'Лэндинг',
+      image: '/img/project.svg',
+      price: 900
+   },
+   {
+		name: 'Корпоративный сайт',
+		image: '/img/email-marketing_10515616.png',
+		price: 1000
+	},
+	{
+		name: 'Интернет магазин',
+		image: '/img/online-shopping_6189466.png',
+		price: 1500
+	},
+	{
+		name: 'Портал',
+		image: '/img/web-programming_18810172.png',
+		price: 2000
+	},
+
+]
+
+
+function createProductCard(service) {
+
+   let article = document.createElement('article');
+   let h3 = document.createElement('h3');
+   let img_card = document.createElement('img');
+   let div_img = document.createElement('div');
+   let h5 = document.createElement('h5');
+   let button = document.createElement('button');
+
+   article.classList.add('card');
+   img_card.classList.add('img_card_style');
+   div_img.classList.add("img_container");
+   h5.classList.add('price_product');
+   button.classList.add('buy_btn');
+
+	h3.textContent = service.name
+   button.textContent = 'Add to cart'
+   h5.textContent = service.price + " EUR"
+
+	img_card.setAttribute('src', service.image);
+   img_card.setAttribute('alt', 'Лэндинг');
+
+button.addEventListener('click', () => {
+      addProduct(service.name, service.price, service.image)
+   })
+
+	div_img.insertAdjacentElement('afterbegin', img_card);
+   article.insertAdjacentElement('beforeend', h3);
+   article.insertAdjacentElement('beforeend', div_img);
+   article.insertAdjacentElement('beforeend', h5);
+   article.insertAdjacentElement('beforeend', button);
+
+   return article
+
+}
+
+let contain = document.querySelector('.contain');
+for (const service of services) {
+   let card = createProductCard(service)
+
+   contain.insertAdjacentElement('beforeend', card)
+}
+// --------------------------------------------
+
+// dam cu mouseul peste shopping cart, apare
+let cartImage = document.querySelector('.shoppingCart img');
+console.log(cartImage)
+
+let cartContent = document.querySelector('.cartContent');
+cartImage.addEventListener('mouseover', () => {
+   cartContent.classList.add('cartContentVisible')
+
+
+   let nav = document.querySelector('nav');
+
+
+cartContent.addEventListener('mouseleave', () => {
+   cartContent.classList.remove('cartContentVisible')
+});
+
+nav.addEventListener('mouseleave', () => {
+   cartContent.classList.remove('cartContentVisible')
+   })
+
+
+});
+
+
+
+function addProduct(product, price, image){
    if (cart[product] != null) {
       cart[product].quantity++;
    } else {
       cart[product] = {}
       cart[product].quantity = 1
       cart[product].price = price;
+      cart[product].image = image;
    }
 
    updateDOM()
@@ -57,8 +152,9 @@ function updateDOM() {
       })
 
 
-      listItem.insertAdjacentElement('beforeend', removeButton);
 
+      listItem.insertAdjacentElement('beforeend', productImage)
+      listItem.insertAdjacentElement('beforeend', removeButton);
       cartList.insertAdjacentElement('beforeend', listItem)
 
       totalPrice += totalProductPrice
@@ -71,6 +167,10 @@ function updateDOM() {
 }
 
 
+// let card = document.querySelector('.card');
+
+
+
 function resetCart() {
    cart = {}
 
@@ -79,72 +179,9 @@ function resetCart() {
 
 
 
-let produse = [
-	{
-		name: 'Лэндинг',
-		image: '/img/project.svg',
-		price: 900
-	},
-	{
-		name: 'Корпоративный сайт',
-		image: '/img/email-marketing_10515616.png',
-		price: 1000
-	},
-	{
-		name: 'Интернет магазин',
-		image: '/img/online-shopping_6189466.png',
-		price: 1500
-	},
-	{
-		name: 'Портал',
-		image: '/img/web-programming_18810172.png',
-		price: 2000
-	},
-]
-
-
-function createProductCard(produs) {
-
-   let article = document.createElement('article')
-   let h3 = document.createElement('h3')
-   let img_card = document.createElement('img');
-   let div_imagine = document.createElement('div');
-   let h5 = document.createElement('h5')
-   let button = document.createElement('button')
-
-   article.classList.add('card')
-   img_card.classList.add('img_card_style');
-   div_imagine.classList.add("image_container");
-   h5.classList.add('pret_produs')
-   button.classList.add('buy_button')
-
-	h3.textContent = produs.name
-   button.textContent = 'Add to cart'
-   h5.textContent = product.price + " EUR"
-
-	img_card.setAttribute('src', produs.image)
-   img_card.setAttribute('alt', 'Лэндинг')
-
-button.addEventListener('click', () => {
-      addProduct(produs.name, produs.price, produs.image)
-   })
-
-	div_imagine.insertAdjacentElement('afterbegin', img_card)
-   article.insertAdjacentElement('beforeend', h3)
-   article.insertAdjacentElement('beforeend', div_imagine)
-   article.insertAdjacentElement('beforeend', h5)
-   article.insertAdjacentElement('beforeend', button)
-
-   return article
-
-
-}
 
 
 
-let contain = document.querySelector('.contain');
-for (const produs of produse) {
-   let card = createProductCard(produs)
 
-   contain.insertAdjacentElement('beforeend', card)
-}
+
+
