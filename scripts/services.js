@@ -7,8 +7,10 @@ let cart = {
 
 if (cartFromStorage) {
    cart = JSON.parse(cartFromStorage)
-   updateDOM()
+   // updateDOM()
 }
+
+updateDOM()
 
 let services = [
    {
@@ -179,11 +181,11 @@ function updateDOM() {
 
 
 
-// function resetCart() {
-//    cart = {}
+function resetCart() {
+   cart = {}
 
-//    updateDOM();
-// }
+   updateDOM();
+}
 
 
 

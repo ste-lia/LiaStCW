@@ -9,9 +9,9 @@ let text_email = document.querySelector('#text_email');
 
 contact_email.addEventListener('input', () => text_email.textContent = contact_email.value.length + " caractere")
 
-let form_contact = document.querySelector('.form__contact');
+let form__contact = document.querySelector('.form__contact');
 
-form_contact.addEventListener('submit', (event) => {
+form__contact.addEventListener('submit', (event) => {
       event.preventDefault();
     // transmitem datele
   
