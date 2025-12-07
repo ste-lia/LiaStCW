@@ -153,7 +153,7 @@ function updateDOM() {
 
 
 
-      listItem.insertAdjacentElement('beforeend', productImage)
+      listItem.insertAdjacentElement('beforeend', productImg)
       listItem.insertAdjacentElement('beforeend', removeButton);
       cartList.insertAdjacentElement('beforeend', listItem)
 
@@ -169,13 +169,17 @@ function updateDOM() {
 
 // let card = document.querySelector('.card');
 
+// card.addEventListener('click', function() {
+// 	alert('Card apasat')
+// });
 
 
-function resetCart() {
-   cart = {}
 
-   updateDOM();
-}
+// function resetCart() {
+//    cart = {}
+
+//    updateDOM();
+// }
 
 
 

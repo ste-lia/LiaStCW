@@ -377,6 +377,14 @@ section {
 } 
 
 
+.slideshow-carousel {
+	display: flex;
+	justify-content: center;
+}
+.carousel-caption {
+	color: #fff;
+}
+
 
 .video {
 	background-color: var(--dark);
