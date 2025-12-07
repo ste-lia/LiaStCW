@@ -81,26 +81,25 @@ for (const service of services) {
 
 // dam cu mouseul peste shopping cart, apare
 let cartImage = document.querySelector('.shoppingCart img');
-console.log(cartImage)
 
 let cartContent = document.querySelector('.cartContent');
-cartImage.addEventListener('mouseover', () => {
+   cartImage.addEventListener('mouseover', () => {
    cartContent.classList.add('cartContentVisible')
 
 
    let nav = document.querySelector('nav');
 
 
-cartContent.addEventListener('mouseleave', () => {
+   cartContent.addEventListener('mouseleave', () => {
    cartContent.classList.remove('cartContentVisible')
-});
+   })
 
-nav.addEventListener('mouseleave', () => {
+   nav.addEventListener('mouseleave', () => {
    cartContent.classList.remove('cartContentVisible')
    })
 
 
-});
+})
 
 
 
@@ -137,6 +136,11 @@ function updateDOM() {
    for (let product in cart) {
 
       let listItem = document.createElement('li');
+      listItem.classList.add('shoppingCartElement')
+
+		let productImage = document.createElement('img')
+		productImage.setAttribute('src', cart[product].image);
+		productImage.classList.add('.cartElementImage')
 
       listItem.textContent = product + ": " + cart[product].quantity + " единиц";
 
@@ -153,7 +157,7 @@ function updateDOM() {
 
 
 
-      listItem.insertAdjacentElement('beforeend', productImg)
+      listItem.insertAdjacentElement('beforeend', productImage)
       listItem.insertAdjacentElement('beforeend', removeButton);
       cartList.insertAdjacentElement('beforeend', listItem)
 
