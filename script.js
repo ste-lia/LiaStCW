@@ -4,7 +4,9 @@ document.cookie = "yummy_cookie=chocolate";
 
 
 // form
-let contact_email = document.querySelector('.message__box');
+// let contact_email = document.querySelector('.message__box');
+let contact_email = document.querySelector('#contact_email');
+
 let text_email = document.querySelector('#text_email');
 
 contact_email.addEventListener('input', () => text_email.textContent = contact_email.value.length + " caractere")

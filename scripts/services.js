@@ -7,10 +7,10 @@ let cart = {
 
 if (cartFromStorage) {
    cart = JSON.parse(cartFromStorage)
-   // updateDOM()
+   updateDOM()
 }
 
-updateDOM()
+// updateDOM()
 
 let services = [
    {
@@ -129,14 +129,15 @@ function deleteProduct(product) {
 }
 
 function updateDOM() {
-   let cartList = document.querySelector('.shoppingCart');
+   // let cartList = document.querySelector('.shoppingCart');
+   let cartList = document.querySelector('.cartContent');
+
    cartList.innerHTML = "";
 
 
-   let totalPrice = 0;
+   let totalPrice = 0
 
    for (let product in cart) {
-
       let listItem = document.createElement('li');
       listItem.classList.add('shoppingCartElement')
 
