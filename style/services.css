@@ -59,12 +59,26 @@ li {
 	width: auto;
 }
 
+.services__items {
+	padding-top: 40px;
+}
+
+.services-list {
+	h2 {
+		color: var(--dark);
+	margin: 20px 0;
+	}
+}
+hr {
+	color: var(--dark);
+}
 .contain {
 	display: flex;
 	flex-flow: reverse;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
 	gap: 30px;
+	margin-bottom: 40px;
 }
 
 .card {
