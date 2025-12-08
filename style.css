@@ -372,7 +372,7 @@ section {
 	padding-left: 15px;
 	transition: all 1s;
 }
-.message_box {
+.message__box {
 	height: 150px;
 }
 .contact__input:invalid {
