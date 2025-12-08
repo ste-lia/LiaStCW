@@ -369,11 +369,11 @@ section {
 	margin: 15px 0;
 	border: none;
 	border-radius: 12px;
-	padding-left: 15px;
+	/* padding-left: 15px; */
 	transition: all 1s;
 }
 .message__box {
-	height: 150px;
+	height: 40px;
 }
 .contact__input:invalid {
 	color: red
@@ -441,3 +441,8 @@ section {
 	
 	align-items: center;
 } */
+
+.contacts-options {
+	display: flex;
+	margin: 15px;
+}
