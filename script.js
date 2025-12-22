@@ -14,7 +14,7 @@ let form__contact = document.querySelector('.form__contact');
 form__contact.addEventListener('submit', (event) => {
       event.preventDefault();
     // transmitem datele
-  
+
 	setTimeout(() => {
 		alert('Запрос отправлен!')
 	}, 5000)
