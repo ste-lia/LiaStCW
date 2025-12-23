@@ -59,6 +59,7 @@ section {
 	border: 0;
 	color: var(--white);
 	margin: 0 auto;
+	margin-bottom: 5px;
 	cursor: pointer;
 }
 .text-center {
@@ -206,69 +207,24 @@ section {
 	transform: scale(1.2);
 } */
 
-.works {
-	position: relative;
-}
-.works__main::before {
-	content: "";
-	position: absolute;
-	height: 500px;
-	background: var(--gradient), var(--gray);
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: -1;
-}
-.works__title {
-	padding: 40px;
-}
-.works__cards {
-   display: grid;
-	grid-template-columns: repeat(auto-fill, 350px);
-	gap: 30px;
-}
-.works__card {
-	border-radius: 10px;
-	box-shadow: 0 0 10px 0 var(--dark);
-	padding: 10px;
-	transition: all 1s linear;
-}
-.works__card:hover {
-	transform: scale(110%);
-}
-.works__pic img {
-	border-radius: 10px;
-	height: 300px;
-	object-fit: cover;
-}
-.works__content {
-	padding: 10px;
-}
-.works-content__title {
-	font-size: 18px;
-	color: var(--dark);
-}
-.works-content__text {
-	color: var(--gray);
-}
-.works hr {
-	color: var(--accent);
-	margin: 50px;
-}
 /* projects */
 .projects {
 	background-color: var(--gray);
 	height: 100px;
 	margin-top: 0;
-   display: flex;
-   flex-wrap: wrap;
+   /* display: flex; */
    min-width: 920px;
    margin: 0 auto;
    justify-content: space-between;
    gap: 20px;
 }
-.projects__item {
+.projects__items {
 	position: relative;
+	display: flex;
+	justify-content: space-between;
+	/* flex-wrap: wrap; */
+}
+.projects__item {
 	cursor: pointer;
 }
 .projects__item::after {
@@ -298,23 +254,44 @@ section {
 /* .projects__info span:hover {
 	transform: scale(2);
 } */
-
 .projects__info-text {
 	font-size: 21px;
 	margin-top: 10px;
 	color: var(--gray);
 }
 
+@media screen and (max-width: 768px) {
+	.projects {
+		gap: 10px;
+	}
+	.projects__info span {
+			font-size: 32px;
+			font-weight: 300;
+		}
+		.projects__info-text {
+			font-size: 18px;
+		}
+}
+
+@media (max-width: 481px) {
+.projects__item {
+	height: 200px;
+	width: 150px;
+}
+	.projects__info span {
+			font-size: 28px;
+			font-weight: 200;
+		}
+	
+		.projects__info-text {
+			font-size: 16px;
+		}
+}
+
 .projects__item {
 	animation: move 10s infinite;
 }
-/* .cerc {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	background: var(--accent);
-	animation: miscare 10s infinite;
-} */
+
 @keyframes move {
 	0% {
 		transform: translate(0px);
@@ -418,6 +395,7 @@ section {
 	height: 150px;
 	background-color: var(--dark);
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
 }
